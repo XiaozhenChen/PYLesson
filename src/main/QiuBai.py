@@ -143,7 +143,7 @@ class QSBK(object):
         while self.enable:
             if len(self.stories) > 0:
                 pageStories = self.stories[0]
-                nowPage + 1
+                nowPage += 1
                 del self.stories[0]
                 self.getOneStory(pageStories, nowPage)
 
