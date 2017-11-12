@@ -21,9 +21,11 @@ class Tool(object):
     # 把段落开头换为\n加空两格
     replacePara = re.compile(r'<p.*?>')
     # 将换行符或双换行符替换为\n
-    replaceBR = re.compile('<br><br>|<br>')
+    replaceBR = re.compile(r'<br><br>|<br>')
     # 将其余标签剔除
-    removeExtraTag = re.compile('<.*?>')
+    removeExtraTag = re.compile(r'<.*?>')
+    # 删除空格
+    removeBlankSpace = re.compile(r'&nbsp;')
 
     def replace(self, x):
         x = re.sub(self.removeImg, '', x)
@@ -33,5 +35,6 @@ class Tool(object):
         x = re.sub(self.replacePara, '\n    ', x)
         x = re.sub(self.replaceBR, '\n', x)
         x = re.sub(self.removeExtraTag, '', x)
+        x = re.sub(self.removeBlankSpace, '', x)
         # strip()将前后多余内容删除
         return x.strip()
