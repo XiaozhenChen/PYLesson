@@ -8,13 +8,13 @@
 ----
 1. 执行命令 `pip3 install pyspider`
 2. 安装之后执行 `pyspider`
-3. 浏览器打开  `http;//localhost:5000`
+3. 浏览器打开  `http://localhost:5000`
 
 问题：
 
 在我执行`pyspider`时提示我`command not found pyspider`?
 
-![](./pyspider command not found.jpg)
+![](https://github.com/lucky9322/PYLesson/blob/master/src/main/pyspider_lib/pyspider%20command%20not%20found.jpg)
 
 解决方式：
 
