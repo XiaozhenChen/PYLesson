@@ -14,7 +14,7 @@
 
 在我执行`pyspider`时提示我`command not found pyspider`?
 
-![](pyspider command not found.jpg)
+![](./pyspider command not found.jpg)
 
 解决方式：
 
