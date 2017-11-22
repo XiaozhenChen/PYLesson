@@ -17,6 +17,9 @@ import os
 from hashlib import md5
 from multiprocessing import Pool
 from json.decoder import JSONDecodeError
+import pymysql
+
+conn = pymysql.connect(host='127.0.0.1', user='root', passwd=None, db='scraping')
 
 
 def get_page_index(offset, keyword):
@@ -82,6 +85,16 @@ def parse_page_detail(html, url):
 
 def save_to_mysql(data):
     pass
+    # try:
+    #     cursor = conn.cursor()
+    #     insert_sql = "insert into"
+    #     cursor.execute(insert_sql)
+    #     conn.commit()
+    # except Exception as e:
+    #     conn.rollback()
+    #     print('保存数据库异常', e)
+    # finally:
+    #     conn.close()
 
 
 def download_image(url):
@@ -117,8 +130,8 @@ def main(offset):
 
 
 if __name__ == "__main__":
-    # main()
-    # print(os.getcwd())
+    main()
+    print(os.getcwd())
     groups = [x * 20 for x in range(0, 20 + 1)]
     pool = Pool()
     pool.map(main, groups)
