@@ -16,3 +16,7 @@
 ## [猫眼电影Top100](https://github.com/lucky9322/PYLesson/tree/master/src/main/maoyantop100)
 
 ## [selenium抓取淘宝美食](https://github.com/lucky9322/PYLesson/tree/master/src/main/taobaomeishi)
+
+## [网易云音乐入住歌手](https://github.com/lucky9322/PYLesson/tree/master/src/main/wyymusic)
+
+## [requests设置ip代理](https://github.com/lucky9322/PYLesson/tree/master/src/main/proxies_ip)
